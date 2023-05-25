@@ -1,19 +1,23 @@
-Write a UNIX command line interpreter.
+# 0x16. C - Simple Shell Project
 
-Usage: simple_shell
-Your Shell should:
+## What is this project about ?
 
-Display a prompt and wait for the user to type a command. A command line always ends with a new line.
-The prompt is displayed again each time a command has been executed.
-The command lines are simple, no semicolons, no pipes, no redirections or any other advanced features.
-The command lines are made only of one word. No arguments will be passed to programs.
-If an executable cannot be found, print an error message and display the prompt again.
-Handle errors.
-You have to handle the “end of file” condition (Ctrl+D)
-You don’t have to:
 
-use the PATH
-implement built-ins
-handle special characters : ", ', `, \, *, &, #
-be able to move the cursor
-h
+
+## How does the Simple Shell work ?
+
+0. To use the shell you execute the binary file <./simple_shell> and then,
+1. The program prints a prompt, then ask and wait for the user input
+2. Then reads the user input and see if the entry is a valid command. If that is the case, the command is executed otherwise, an error message is printed.
+3. The prompt is then printed again and the whole cycle recommence, until the program is exited or killed using a signal.
+4. Apart from the commoun inbuilt commands such as <ls> <pwd> <rm> the program is also
+5. You can leave the program with the <exit> command or using the Ctrl + D key stroke
+
+
+## Tools
+
+- OS : Ubuntu 20.04.6 LTS on Windows (WLS_2)
+- Code Editor : neovim v0.9.0
+- Compiler : gcc v9.4.0
+- Flags : -Wall -Werror -Wextra -pedantic std=gnu89
+
